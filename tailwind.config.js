@@ -4,6 +4,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        'mobile': '375px',
+      },
       fontFamily: {
         suit: ['SUIT', 'sans-serif'], 
       },
@@ -14,16 +17,16 @@ module.exports = {
         regular: '400',
       },
       fontSize: {
-        h0: ['24px', '36px'],
-        h1: ['20px', '30px'],
-        title1: ['18px', '27px'],
-        title2: ['18px', '27px'],
-        label1: ['16px', '24px'],
-        label2: ['16px', '24px'],
-        body1: ['14px', '21px'],
-        body2: ['14px', '21px'],
-        caption1: ['12px', '18px'],
-        caption2: ['12px', '18px'],
+        h0: ['24px', { lineHeight: '36px', letterSpacing: '0' }],
+        h1: ['20px', { lineHeight: '30px', letterSpacing: '-1.5%' }],
+        title1: ['18px', { lineHeight: '27px', letterSpacing: '-1.5%' }],
+        title2: ['18px', { lineHeight: '27px', letterSpacing: '-1.5%' }],
+        label1: ['16px', { lineHeight: '24px', letterSpacing: '-1.5%' }],
+        label2: ['16px', { lineHeight: '24px', letterSpacing: '-1.5%' }],
+        body1: ['14px', { lineHeight: '21px', letterSpacing: '-1.5%' }],
+        body2: ['14px', { lineHeight: '21px', letterSpacing: '-1.5%' }],
+        caption1: ['12px', { lineHeight: '18px', letterSpacing: '-1.5%' }],
+        caption2: ['12px', { lineHeight: '18px', letterSpacing: '-1.5%' }],
       },
       colors: {
         primary: {
@@ -47,6 +50,9 @@ module.exports = {
           grey100: '#F2F4F6',
           grey50: '#F9FAFB',
         },
+      },
+    spacing: {
+        screenMargin: '20px',
       },
     },
   },

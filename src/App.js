@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import LoginPage from './pages/Login/LoginPage';
 import KakaoRedirectPage from './pages/OAuth/KakaoRedirectPage';
-import HomePage from './pages/Home/HomePage';
+import HomePage from './pages/Farmer/Home/HomePage';
+import OnboardingPage from './pages/Farmer/Onboarding/OnboardingPage';
 
 function App() {
   const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
@@ -27,7 +28,8 @@ return (
     <Routes>
       <Route path="/login" element={<LoginPage />} />
       <Route path="/oauth/kakao" element={<KakaoRedirectPage />} />
-      <Route path="/home" element={<HomePage />} />
+      <Route path="/farmer/onboarding" element={<OnboardingPage />} />
+      <Route path="/farmer/home" element={<HomePage />} />
       <Route
         path="/"
         element={
@@ -50,6 +52,14 @@ return (
                 홈 페이지
               </a>
             </div>
+              <div className="flex gap-4">
+                <a
+                  href="/farmer/onboarding"
+                  className="px-4 py-2 bg-white text-blue-600 font-semibold rounded hover:bg-blue-100"
+                >
+                  👩‍🌾 Farmer로 시작하기
+                </a>
+              </div>
           </div>
         }
       />
