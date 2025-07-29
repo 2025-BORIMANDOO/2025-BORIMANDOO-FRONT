@@ -5,17 +5,13 @@
 본 레포지토리는 프론트엔드 개발을 담당하는 저장소입니다.
 
 ## 🚀 기술 스택
-Frontend Framework: React
 
-Language: TypeScript
-
-Styling: Tailwind CSS
-
-State Management: Recoil (or Zustand)
-
-API Communication: Axios
-
-Routing: react-router-dom
+- **Frontend Framework:** React
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **State Management:** Recoil (or Zustand)
+- **API Communication:** Axios
+- **Routing:** react-router-dom
 ---
 
 ## 📂 디렉토리 구조
