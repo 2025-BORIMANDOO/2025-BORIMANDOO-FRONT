@@ -10,7 +10,9 @@ export default function AnimalTypeSelectPage() {
   const current = location.state?.selected || '소';
 
   const handleSelect = (value) => {
-    navigate(-1, { state: { selectedAnimal: value } });
+    navigate('/farmer/home/farmerrequest', {
+      state: { selectedAnimal: value }, // ✅ 수정됨
+    });
   };
 
   return (

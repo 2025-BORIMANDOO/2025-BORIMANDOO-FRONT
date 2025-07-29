@@ -67,6 +67,7 @@ export default function VetOnboardingPage() {
             : 'bg-greyscale-grey300 text-greyscale-grey500 cursor-not-allowed'
         }`}
         disabled={!isComplete}
+        onClick={() => navigate('/vet/home')}
       >
         메디모 시작하기
       </button>

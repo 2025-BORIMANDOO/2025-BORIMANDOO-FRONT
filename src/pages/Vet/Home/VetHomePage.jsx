@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from "../../../components/Header";
 
-export default function HomePage() {
+export default function VetHomePage() {
   const navigate = useNavigate();
 
   return (
@@ -28,37 +28,37 @@ export default function HomePage() {
       <div className="grid grid-cols-2 gap-x-[8px] gap-y-[8px]">
         {/* 진료 요청 */}
         <button
-          onClick={() =>navigate('/farmer/home/farmerrequest')}
+          onClick={() => navigate('/farmer/request')}
           className="w-[164px] h-[188px]"
         >
           <img
-            src="/icons/card-farm-request.svg"
+            src="/icons/card-vet-request.svg"
             alt="진료 요청"
             className="w-full h-full object-cover"
           />
         </button>
 
         <div className="flex flex-col gap-[8px]">
-          {/* 요청 내역 */}
+          {/* 진료 이력 */}
           <button
-            onClick={() => navigate('/farmer/home/history')}
+            onClick={() => navigate('/farmer/history')}
             className="w-[163px] h-[90px]"
           >
             <img
-              src="/icons/card-farm-history.svg"
-              alt="요청 내역"
+              src="/icons/card-vet-history.svg"
+              alt="진료 이력"
               className="w-full h-full object-cover"
             />
           </button>
 
-          {/* 약품 및 예방접종 */}
+          {/* 수익 추적 */}
           <button
             onClick={() => navigate('/farmer/medicine')}
             className="w-[163px] h-[90px]"
           >
             <img
-              src="/icons/card-farm-medicine.svg"
-              alt="약품 및 예방 접종"
+              src="/icons/card-vet-medicine.svg"
+              alt="수익 추적"
               className="w-full h-full object-cover"
             />
           </button>

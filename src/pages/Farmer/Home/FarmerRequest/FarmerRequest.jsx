@@ -1,20 +1,41 @@
-import React, { useState } from 'react';
+// src/pages/Farmer/Home/FarmerRequest/FarmerRequest.jsx
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import Header from '../../../../components/Header';
 
 export default function FarmerRequest() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const selectedAnimal = location.state?.selectedAnimal;
   const [urgency, setUrgency] = useState('일반');
   const [animalType, setAnimalType] = useState('소');
   const [symptom, setSymptom] = useState('');
   const [imageFile, setImageFile] = useState(null);
+
+  const isFormValid = urgency && animalType && symptom.trim() !== '' && imageFile;
+
+  // 뒤로 왔을 때 선택된 가축 반영
+  useEffect(() => {
+    if (selectedAnimal) {
+      setAnimalType(selectedAnimal);
+    }
+  }, [selectedAnimal]);
 
   const handleImageChange = (e) => {
     if (e.target.files && e.target.files.length > 0) {
       setImageFile(e.target.files[0]);
     }
   };
-
+  const handleSubmit = () => {
+    if (!isFormValid) return;
+    // TODO: 제출 처리 로직 (예: API 전송 등)
+    navigate('/farmer/home');
+  };
+  
   return (
     <div className="max-w-mobile mx-auto min-h-screen bg-white px-screenMargin pt-[60px] pb-10 font-suit text-greyscale-black">
-      <h1 className="text-h1 font-extrabold mb-6">진료 요청하기</h1>
+      <Header title="진료 요청하기" showBack onBack={() => navigate(-1)} />
 
       {/* 긴급도 */}
       <div className="mb-6">
@@ -51,13 +72,17 @@ export default function FarmerRequest() {
       {/* 가축 종류 */}
       <div className="mb-6">
         <p className="text-label1 font-semibold mb-2">가축 종류</p>
-          <button
-            onClick={() => navigate('/farmer/select-animal', { state: { selected: animalType } })}
-            className="flex justify-between items-center w-full px-4 py-3 border border-greyscale-grey300 rounded-lg text-body1 text-greyscale-black"
-          >
+        <button
+          onClick={() =>
+            navigate('/farmer/select-animal', {
+              state: { selected: animalType },
+            })
+          }
+          className="flex justify-between items-center w-full px-4 py-3 border border-greyscale-grey300 rounded-lg text-body1 text-greyscale-black"
+        >
           {animalType}
           <img
-            src="/icons/chevron-down.svg"
+            src="/icons/arrow-down.svg"
             alt="드롭다운"
             className="w-4 h-4 text-greyscale-grey500"
           />
@@ -92,15 +117,32 @@ export default function FarmerRequest() {
           증상이 드러나는 사진을 첨부해주세요.
         </p>
         <label className="block w-full h-[120px] bg-greyscale-grey100 border border-greyscale-grey300 rounded-lg flex flex-col items-center justify-center text-greyscale-grey500 text-body2 cursor-pointer">
-          <input type="file" accept="image/*" onChange={handleImageChange} className="hidden" />
-          <img src="/icons/image-plus.svg" alt="사진 추가" className="w-6 h-6 mb-1" />
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handleImageChange}
+            className="hidden"
+          />
+          <img
+            src="/icons/add-photo.svg"
+            alt="사진 추가"
+            className="w-6 h-6 mb-1"
+          />
           사진 추가 {imageFile ? '(1/1)' : '(0/1)'}
         </label>
       </div>
 
       {/* 제출 버튼 */}
-      <button className="w-full bg-primary-blue text-greyscale-white rounded-lg py-3 text-label1 font-semibold">
-        제출하기
+      <button
+      onClick={handleSubmit}
+      disabled={!isFormValid}
+      className={`w-full py-3 rounded-lg text-label1 font-semibold 
+      ${isFormValid
+        ? 'bg-primary-blue text-greyscale-white'
+        : 'bg-greyscale-grey300 text-greyscale-white cursor-not-allowed'}
+      `}
+      >
+      제출하기
       </button>
     </div>
   );
