@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import LoginPage from './pages/Login/LoginPage';
-import KakaoRedirectPage from './pages/OAuth/KakaoRedirectPage';
-import HomePage from './pages/Farmer/Home/HomePage';
-import OnboardingPage from './pages/Farmer/Onboarding/OnboardingPage';
-import MyPage from './pages/Farmer/FarmerMyPage/FarmerMyPage';
+import LoginPage from './pages/Login/LoginPage.jsx';
+import KakaoRedirectPage from './pages/OAuth/KakaoRedirectPage.jsx';
+import HomePage from './pages/Farmer/Home/HomePage.jsx';
+import OnboardingPage from './pages/Farmer/Onboarding/OnboardingPage.jsx';
+import FarmerMyPage from './pages/Farmer/FarmerMyPage/FarmerMyPage.jsx';
+
 
 function App() {
   const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
