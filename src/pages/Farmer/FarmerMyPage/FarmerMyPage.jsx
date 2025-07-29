@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function FarmerMyPage() {
   const navigate = useNavigate();
-  
+
   return (
     <div className="bg-white min-h-screen max-w-[375px] mx-auto px-5 pb-20 pt-[60px] font-suit text-[#1F1F1F]">
       {/* 상단 로고 및 알림 */}
@@ -49,14 +49,14 @@ export default function FarmerMyPage() {
       {/* 하단 네비게이션 */}
       <div className="fixed bottom-0 left-0 right-0 max-w-[375px] mx-auto bg-white border-t border-gray-200 flex justify-around items-center h-[64px] rounded-t-[20px]">
         <button className="flex flex-col items-center text-[#7A7A7A]">
-          <img src="/icons/home.svg" alt="홈" className="w-6 h-6" />
+          <img src="/icons/bn-home-gray.svg" alt="홈" className="w-6 h-6" />
           <span className="text-[12px] mt-[2px]">홈</span>
         </button>
         <button
           className="flex flex-col items-center text-[#B7B7B7]"
           onClick={() => navigate('/mypage')}
         >
-          <img src="/icons/user-filled.svg" alt="내 정보" className="w-6 h-6" />
+          <img src="/icons/bn-mypage-black.svg" alt="내 정보" className="w-6 h-6" />
           <span className="text-[12px] mt-[2px] font-semibold">내 정보</span>
         </button>
       </div>

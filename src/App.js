@@ -6,6 +6,9 @@ import KakaoRedirectPage from './pages/OAuth/KakaoRedirectPage.jsx';
 import HomePage from './pages/Farmer/Home/HomePage.jsx';
 import OnboardingPage from './pages/Farmer/Onboarding/OnboardingPage.jsx';
 import FarmerMyPage from './pages/Farmer/FarmerMyPage/FarmerMyPage.jsx';
+import AnimalTypeSelectPage from './pages/Farmer/Home/FarmerRequest/AnimalTypeSelectPage.jsx';
+import RoleSelectPage from './pages/Login/RoleSelectPage.jsx';
+import VetOnboardingPage from './pages/Vet/OnBoarding/VetOnBoardingPage.jsx';
 
 
 function App() {
@@ -25,50 +28,20 @@ function App() {
       .catch(err => console.error('네트워크 에러:', err));
   }, [apiBaseUrl]);
 
-return (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/oauth/kakao" element={<KakaoRedirectPage />} />
-      <Route path="/farmer/onboarding" element={<OnboardingPage />} />
-      <Route path="/farmer/home" element={<HomePage />} />
-      <Route path="/farmer/mypage" element={<FarmerMyPage />} />
-      <Route
-        path="/"
-        element={
-          <div className="bg-purple-500 text-white p-6 rounded-lg min-h-screen flex flex-col items-center justify-center font-suit">
-            <h1 className="text-3xl font-extrabold mb-4">Tailwind CSS + SUIT 폰트 적용 성공!</h1>
-            <p className="text-body1 font-regular mb-2">API Base URL:</p>
-            <code className="bg-gray-800 p-2 rounded mb-6">{apiBaseUrl}</code>
-
-            <div className="flex gap-4">
-              <a
-                href="/login"
-                className="px-4 py-2 bg-white text-purple-500 font-bold rounded hover:bg-gray-200"
-              >
-                로그인 페이지
-              </a>
-              <a
-                href="/home"
-                className="px-4 py-2 bg-white text-purple-500 font-bold rounded hover:bg-gray-200"
-              >
-                홈 페이지
-              </a>
-            </div>
-              <div className="flex gap-4">
-                <a
-                  href="/farmer/onboarding"
-                  className="px-4 py-2 bg-white text-blue-600 font-semibold rounded hover:bg-blue-100"
-                >
-                  👩‍🌾 Farmer로 시작하기
-                </a>
-              </div>
-          </div>
-        }
-      />
-    </Routes>
-  </BrowserRouter>
-);
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/login/roleselect" element={<RoleSelectPage />} />
+        <Route path="/oauth/kakao" element={<KakaoRedirectPage />} />
+        <Route path="/farmer/onboarding" element={<OnboardingPage />} />
+        <Route path="/farmer/home" element={<HomePage />} />
+        <Route path="/farmer/farmermypage" element={<FarmerMyPage />} />
+        <Route path="/farmer/home/farmerrequest" element={<AnimalTypeSelectPage />} />
+        <Route path="/vet/onboarding" element={<VetOnboardingPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
