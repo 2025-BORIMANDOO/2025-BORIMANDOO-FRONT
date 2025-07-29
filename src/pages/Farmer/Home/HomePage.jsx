@@ -43,7 +43,7 @@ const HomePage = () => {
         </button>
         <button
           className="flex flex-col items-center text-[#B7B7B7]"
-          onClick={() => navigate('/mypage')}
+          onClick={() => navigate('/farmer/mypage/mypage')}
         >
           <img src="/icons/user.svg" className="w-6 h-6 mb-1" />
           <span className="text-xs">내 정보</span>

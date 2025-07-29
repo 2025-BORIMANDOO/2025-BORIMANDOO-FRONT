@@ -5,6 +5,7 @@ import LoginPage from './pages/Login/LoginPage';
 import KakaoRedirectPage from './pages/OAuth/KakaoRedirectPage';
 import HomePage from './pages/Farmer/Home/HomePage';
 import OnboardingPage from './pages/Farmer/Onboarding/OnboardingPage';
+import MyPage from './pages/Farmer/FarmerMyPage/FarmerMyPage';
 
 function App() {
   const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
@@ -30,6 +31,7 @@ return (
       <Route path="/oauth/kakao" element={<KakaoRedirectPage />} />
       <Route path="/farmer/onboarding" element={<OnboardingPage />} />
       <Route path="/farmer/home" element={<HomePage />} />
+      <Route path="/farmer/mypage" element={<FarmerMyPage />} />
       <Route
         path="/"
         element={
