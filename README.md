@@ -39,14 +39,13 @@ src/
 │   ├── History/
 │   ├── MyPage/
 │   └── Settings/
-├── routes/            # 라우팅 파일
-├── stores/            # 상태 관리
+├── routes/            # 라우팅 관련 파일
+├── stores/            # 상태 관리 (Recoil 등)
 ├── services/          # API 요청 함수
-├── types/             # TypeScript 타입 정의
 ├── utils/             # 유틸 함수
 ├── styles/            # Tailwind 설정, 글로벌 CSS
-├── App.tsx            # 라우팅 진입 파일
-├── main.tsx           # React 엔트리 파일
+├── App.jsx            # 라우팅 진입 파일
+├── main.jsx           # React 엔트리 파일
 └── index.css          # 글로벌 CSS
 ```
 
