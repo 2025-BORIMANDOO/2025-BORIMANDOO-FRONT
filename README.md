@@ -11,7 +11,7 @@
 ## 🚀 기술 스택
 
 - **Frontend Framework:** React
-- **Language:** TypeScript
+- **Language:** JavaScript (JSX 기반)  
 - **Styling:** Tailwind CSS
 - **State Management:** Recoil (or Zustand)
 - **API Communication:** Axios
