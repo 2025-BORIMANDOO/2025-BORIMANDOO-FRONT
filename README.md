@@ -53,5 +53,5 @@ src/
 ## 🛰️ 배포 링크
 
 > 서비스 바로가기
-👉 borimandoo.vercel.app
+👉 [borimandoo.vercel.app](https://borimandoo-8k9429rx2-golds-projects-6c43d248.vercel.app/)
 
