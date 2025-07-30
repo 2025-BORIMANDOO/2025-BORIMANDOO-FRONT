@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const emergencyOptions = ["전체", "일반", "응급"];
+const emergencyOptions = ["전체", "일반", "긴급"];
 
 export default function EmergencyFilterPage() {
   const [selected, setSelected] = useState("전체");
@@ -13,20 +13,17 @@ export default function EmergencyFilterPage() {
   };
 
   return (
-    <div className="w-full max-w-[375px] min-h-screen mx-auto px-4 pt-6 bg-white font-suit">
-      {/* 상단바 */}
-      <div className="relative flex items-center justify-center mb-8">
-        <h1 className="absolute left-1/2 -translate-x-1/2 text-[18px] font-semibold text-black">긴급 여부</h1>
-      </div>
-
-      {/* 옵션 리스트 */}
-      <div className="flex flex-col gap-4">
+    <div className="w-full max-w-[375px] min-h-screen mx-auto px-[20px] pt-[40px] bg-white font-suit text-greyscale-black">
+      <h1 className="text-h4 font-semibold mb-[20px]">긴급 여부</h1>
+      <div className="flex flex-col gap-[12px]">
         {emergencyOptions.map((option) => (
           <button
             key={option}
             onClick={() => handleSelect(option)}
-            className={`w-full px-4 py-3 text-left rounded-lg border ${
-              selected === option ? "border-primary-blue text-primary-blue font-semibold" : "border-gray-200"
+            className={`text-left px-[16px] py-[12px] rounded-[8px] border ${
+              selected === option
+                ? "border-primary-blue bg-[#F2F6FF] text-primary-blue font-semibold"
+                : "border-gray-200 bg-white text-black"
             }`}
           >
             {option}
