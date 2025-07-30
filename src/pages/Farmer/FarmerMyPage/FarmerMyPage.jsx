@@ -7,7 +7,7 @@ export default function FarmerMyPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-white min-h-screen max-w-[375px] mx-auto px-5 pb-20 pt-[60px] font-suit text-[#1F1F1F]">
+    <div className="bg-white min-h-screen max-w-[375px] mx-auto px-5 pb-20 font-suit text-[#1F1F1F]">
       <Header showLogo={true} showBell={true} showBack={false} />
 
       {/* 유저 이름 */}

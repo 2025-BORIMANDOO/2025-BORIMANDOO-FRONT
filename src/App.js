@@ -18,7 +18,16 @@ import VetMyPage from './pages/Vet/VetMyPage/VetMypage.jsx';
 import HistoryDetail from './pages/Farmer/Home/HistoryDetail.jsx';
 import Estimate from './pages/Farmer/Home/Estimate.jsx';
 
-import EstimateConfirm from './pages/Farmer/Home/EstimateConfirm';
+import EstimateConfirm from './pages/Farmer/Home/EstimateConfirm.jsx';
+import EmergencyFilterPage from './pages/Vet/Home/VetRequest/EmergencyFilterPage.jsx';
+import LocationFilterPage from './pages/Vet/Home/VetRequest/LocationFilterPage.jsx';
+
+import VetRequestListPage from './pages/Vet/Home/VetRequest/VetRequestListPage.jsx';
+import VetRequestDetail from './pages/Vet/Home/VetRequest/VetRequestDetail.jsx';
+import VetEstimate from './pages/Vet/Home/VetRequest/VetEstimate.jsx';
+
+import AcceptedList from './pages/Vet/Home/AcceptedList.jsx';
+import AcceptedListDetail from './pages/Vet/Home/AcceptedListDetail.jsx';
 
 function App() {
   const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
@@ -50,6 +59,11 @@ function App() {
         <Route path="/farmer/select-animal" element={<AnimalTypeSelectPage />} />
         <Route path="/farmer/home/estimateconfirm" element={<EstimateConfirm />} />
 
+        <Route path="/vet/home/vetrequest/emergency" element={<EmergencyFilterPage />} />
+        <Route path="/vet/home/vetrequest/location" element={<LocationFilterPage />} />
+        <Route path="/vet/request/:id/estimate" element={<VetEstimate />} />
+        <Route path="/vet/accepted/:id" element={<AcceptedListDetail />} />
+
         {/* 하단바가 필요한 페이지 */}
         <Route element={<Layout />}>
           <Route path="/farmer/home" element={<HomePage />} />
@@ -60,6 +74,10 @@ function App() {
           
           <Route path="/vet/home" element={<VetHomePage />} />
           <Route path="/vet/vetmypage" element={<VetMyPage />} />
+          <Route path="/vet/request/list" element={<VetRequestListPage />} />
+
+          <Route path="/vet/accepted" element={<AcceptedList />} />
+          <Route path="/vet/accepted/:id" element={<AcceptedListDetail />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -7,7 +7,7 @@ export default function VetMyPage() {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-white min-h-screen max-w-mobile mx-auto px-screenMargin pb-20 pt-[60px] font-suit text-greyscale-black">
+    <div className="bg-white h-[812px] max-w-mobile mx-auto px-screenMargin pb-20 pt-[60px] font-suit text-greyscale-black">
       {/* 상단 로고 및 알림 */}
       <Header showLogo={true} showBell={true} showBack={false} />
 

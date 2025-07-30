@@ -16,7 +16,7 @@ export default function VetOnboardingPage() {
   };
 
   return (
-    <div className="max-w-mobile mx-auto min-h-screen bg-white px-screenMargin pt-[60px] pb-10 font-suit text-greyscale-black">
+    <div className="max-w-mobile mx-auto h-[812px] bg-white px-screenMargin pt-[60px] pb-10 font-suit text-greyscale-black">
       {/* 로고 */}
       <img src="/icons/logo-medimo-color.svg" alt="medimo logo" className="w-[112px] mb-6" />
 
@@ -24,26 +24,27 @@ export default function VetOnboardingPage() {
       <h1 className="text-h1 font-extrabold leading-[30px] mb-2">안녕하세요 손하늘 님</h1>
       <p className="text-body1 font-regular mb-6">시작을 위해 빈칸을 채워주세요.</p>
 
-      {/* 전화번호 */}
-      <div className="mb-5">
-        <p className="text-label1 font-semibold mb-1">전화번호</p>
-        <input
-          type="tel"
-          placeholder="숫자만 입력해주세요."
-          value={phone}
-          onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))}
-          className="w-full px-4 py-3 border border-greyscale-grey300 rounded-lg text-body1"
-        />
-      </div>
+      <div className="mb-[40px]">
+  <label className="block text-[16px] font-semibold text-black mb-[6px]">
+    전화번호
+  </label>
+  <input
+    type="tel"
+    value={phone}
+    onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))}
+    placeholder="01012345678"
+    className="w-[335px] h-[56px] rounded-[8px] border border-gray-300 px-4 text-[14px] placeholder-gray-400 focus:outline-none"
+  />
+</div>
 
       {/* 면허번호 */}
       <div className="mb-5">
         <p className="text-label1 font-semibold mb-1">의사면허번호</p>
         <input
           type="text"
-          placeholder="주소를 입력해주세요."
+          placeholder="숫자만 입력해주세요."
           value={license}
-          onChange={(e) => setLicense(e.target.value)}
+          onChange={(e) => setLicense(e.target.value.replace(/\D/g, ''))}
           className="w-full px-4 py-3 border border-greyscale-grey300 rounded-lg text-body1"
         />
       </div>

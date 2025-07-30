@@ -9,7 +9,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="relative max-w-mobile mx-auto min-h-screen font-suit text-greyscale-black">
+    <div className="relative max-w-mobile mx-auto h-[812px] font-suit text-greyscale-black">
       {/* 배경 이미지 */}
       <img
         src="/images/bg-login.png"

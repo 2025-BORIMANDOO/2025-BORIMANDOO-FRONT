@@ -1,0 +1,36 @@
+// src/data/historyDummy.js
+export const dummyRequests = [
+  {
+    id: 1,
+    date: '2025.07.29',
+    status: '요청 대기',
+    doctor: '미정',
+    location: '서울시 서대문구 신촌동',
+    type: '긴급',
+    animal: '소',
+    symptom: '열이 나고 식욕이 없습니다.',
+    image: '/images/photo-placeholder.png',
+  },
+  {
+    id: 2,
+    date: '2025.07.29',
+    status: '진료 예정',
+    doctor: '손하늘',
+    location: '서울시 서대문구 신촌동',
+    type: '일반',
+    animal: '돼지',
+    symptom: '피부에 발진이 있으며 움직임이 둔함.',
+    image: '/images/photo-placeholder.png',
+  },
+  {
+    id: 3,
+    date: '2025.07.29',
+    status: '진료 완료',
+    doctor: '금채원',
+    location: '서울시 서대문구 신촌동',
+    type: '일반',
+    animal: '소',
+    symptom: '다리를 절고 있음.',
+    image: '/images/photo-placeholder.png',
+  },
+];
