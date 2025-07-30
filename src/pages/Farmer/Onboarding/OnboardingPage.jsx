@@ -9,7 +9,7 @@ export default function InfoInputPage() {
   const isValid = phone.trim() !== '' && address.trim() !== '';
 
   return (
-    <div className="min-h-screen bg-white px-[20px] pt-[100px] max-w-[375px] mx-auto flex flex-col justify-between">
+    <div className="h-[812px] bg-white px-[20px] pt-[50px] max-w-[375px] mx-auto flex flex-col justify-between">
       <div>
         {/* 로고 */}
         <img
@@ -28,13 +28,13 @@ export default function InfoInputPage() {
 
         {/* 전화번호 */}
         <div className="mb-[40px]">
-          <label className="block text-[16px] font-semibold text-black mb-[6px]">
-            전화번호
-          </label>
+        <label className="block text-[16px] font-semibold text-black mb-[6px]">
+          전화번호
+        </label>
           <input
             type="tel"
             value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={(e) => setPhone(e.target.value.replace(/\D/g, ''))}
             placeholder="01012345678"
             className="w-[335px] h-[56px] rounded-[8px] border border-gray-300 px-4 text-[14px] placeholder-gray-400 focus:outline-none"
           />

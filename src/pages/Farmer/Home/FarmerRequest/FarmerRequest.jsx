@@ -34,7 +34,7 @@ export default function FarmerRequest() {
   };
   
   return (
-    <div className="max-w-mobile mx-auto min-h-screen bg-white px-screenMargin pt-[60px] pb-10 font-suit text-greyscale-black">
+    <div className="max-w-mobile mx-auto min-h-screen bg-white px-screenMargin pb-10 font-suit text-greyscale-black">
       <Header title="진료 요청하기" showBack onBack={() => navigate(-1)} />
 
       {/* 긴급도 */}

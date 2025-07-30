@@ -6,7 +6,7 @@ export default function VetHomePage() {
   const navigate = useNavigate();
 
   return (
-    <div className="max-w-mobile mx-auto min-h-screen bg-white px-screenMargin pt-[60px] pb-[88px] font-suit text-greyscale-black">
+    <div className="max-w-mobile mx-auto min-h-screen bg-white px-screenMargin pb-[88px] font-suit text-greyscale-black">
       {/* 상단바 */}
       <Header showLogo={true} showBell={true} showBack={false} />
 
@@ -28,7 +28,7 @@ export default function VetHomePage() {
       <div className="grid grid-cols-2 gap-x-[8px] gap-y-[8px]">
         {/* 진료 요청 */}
         <button
-          onClick={() => navigate('/farmer/request')}
+          onClick={() => navigate('/vet/request/list')}
           className="w-[164px] h-[188px]"
         >
           <img
@@ -41,7 +41,7 @@ export default function VetHomePage() {
         <div className="flex flex-col gap-[8px]">
           {/* 진료 이력 */}
           <button
-            onClick={() => navigate('/farmer/history')}
+            onClick={() => navigate('/vet/accepted')}
             className="w-[163px] h-[90px]"
           >
             <img

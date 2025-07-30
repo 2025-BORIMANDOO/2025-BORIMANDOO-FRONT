@@ -6,7 +6,7 @@ export default function HomePage() {
   const navigate = useNavigate();
 
   return (
-    <div className="max-w-mobile mx-auto min-h-screen bg-white px-screenMargin pt-[60px] pb-[88px] font-suit text-greyscale-black">
+    <div className="max-w-mobile mx-auto h-[812px] bg-white px-screenMargin pb-[88px] font-suit text-greyscale-black">
       {/* 상단바 */}
       <Header showLogo={true} showBell={true} showBack={false} />
 
